@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 body {
+    font-family: 'Open Sans', sans-serif;
     color: #1A252F;
     background: #ecf0f1;
     padding: 0 1em 1em;
@@ -28,10 +31,24 @@ input {
     box-shadow: 0 0.25rem 0.25rem -0.1rem rgba(0, 0, 0, 0.5);
 }
 
+.bayan__list:hover .bayan__label,
+.bayan__list:hover .bayan__label span {
+    color: #D65DB1;
+}
+
 .bayan__item {
     width: 100%;
     color: #1A252F;
     overflow: hidden;
+    border-bottom: 1px solid grey;
+}
+
+.bayan__item:last-child {
+    border-bottom: none;
+}
+
+.bayan__item:hover .bayan__label span {
+    transform: rotate(-90deg);
 }
 
 .bayan__label {
@@ -43,13 +60,16 @@ input {
     cursor: pointer;
 }
 
-.bayan__label:hover {
-    background: #8EAFCE;
+.bayan__label span {
+    color: #D3F5FF;
+    transition: transform 0.35s;
 }
 
+.bayan__content:hover,
 .bayan__label:hover+.bayan__content {
     max-height: 100vh;
     padding: 1em;
+    cursor: pointer;
 }
 
 .bayan__content {
@@ -58,13 +78,16 @@ input {
 
     max-height: 0;
     padding: 0 1em;
-    color: #D3F5FF;
-    background: white;
+    background-color: #D3F5FF;
     transition: all 0.35s;
 }
 
-input:checked+.bayan__label {
-    background: #8EAFCE;
+input:checked~.bayan__label {
+    color: #D65DB1;
+}
+
+input:checked~.bayan__label span {
+    transform: rotate(-90deg);
 }
 
 input:checked~.bayan__content {
