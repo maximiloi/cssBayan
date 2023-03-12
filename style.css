@@ -51,30 +51,29 @@ input {
 
 .bayan__label {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    font-weight: bold;
+
     padding: 1em;
     background: #D3F5FF;
-    font-weight: bold;
     cursor: pointer;
 }
 
 .bayan__label span {
     color: #D3F5FF;
-    transition: transform 1.45s;
+    transition: transform 0.45s;
 }
 
-.bayan__content {
+.bayan__inner {
     display: flex;
-    justify-content: center;
-
-    max-height: 0;
-    padding: 0 1em;
-    background-color: #D3F5FF;
-    transition: all 1.45s;
+    justify-content: space-between;
 }
 
 .bayan__image {
-    width: 100%;
+    align-self: center;
+    height: 0;
+    transition: 0.45s ease;
 }
 
 input:checked~.bayan__label {
@@ -85,9 +84,25 @@ input:checked~.bayan__label span {
     transform: rotate(-90deg);
 }
 
-input:checked~.bayan__content {
-    max-height: 100%;
+input:checked~.bayan__label .bayan__image {
+    height: 80vw;
     padding: 1em;
+}
+
+@media (hover: hover) {
+
+    .bayan__list:hover .bayan__label,
+    .bayan__list:hover .bayan__label span {
+        color: #D65DB1;
+    }
+
+    .bayan__item:hover .bayan__label span {
+        transform: rotate(-90deg);
+    }
+
+    .bayan__label:hover>.bayan__image {
+        height: 30vw;
+    }
 }
 
 @media only screen and (min-width: 450px) {
@@ -112,9 +127,10 @@ input:checked~.bayan__content {
         max-width: 90%;
     }
 
-    .bayan__image {
-        width: 90%;
+    input:checked~.bayan__label .bayan__image {
+        height: 60vw;
     }
+
 }
 
 @media only screen and (min-width: 820px) {
@@ -133,26 +149,7 @@ input:checked~.bayan__content {
         max-width: 75%;
     }
 
-    .bayan__image {
-        width: 50%;
-    }
-}
-
-@media (hover: hover) {
-
-    .bayan__list:hover .bayan__label,
-    .bayan__list:hover .bayan__label span {
-        color: #D65DB1;
-    }
-
-    .bayan__item:hover .bayan__label span {
-        transform: rotate(-90deg);
-    }
-
-    .bayan__content:hover,
-    .bayan__label:hover+.bayan__content {
-        max-height: 100%;
-        padding: 1em;
-        cursor: pointer;
+    input:checked~.bayan__label .bayan__image {
+        height: 30vw;
     }
 }
