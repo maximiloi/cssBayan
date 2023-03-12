@@ -60,7 +60,7 @@ input {
 
 .bayan__label span {
     color: #D3F5FF;
-    transition: transform 0.45s;
+    transition: transform 1.45s;
 }
 
 .bayan__content {
@@ -70,7 +70,7 @@ input {
     max-height: 0;
     padding: 0 1em;
     background-color: #D3F5FF;
-    transition: all 0.45s;
+    transition: all 1.45s;
 }
 
 .bayan__image {
@@ -87,7 +87,6 @@ input:checked~.bayan__label span {
 
 input:checked~.bayan__content {
     max-height: 100%;
-    height: 100%;
     padding: 1em;
 }
 
