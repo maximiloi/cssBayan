@@ -4,7 +4,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #1A252F;
     background: #ecf0f1;
-    padding: 0 1em 1em;
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
@@ -24,11 +25,12 @@ input {
 }
 
 .bayan__list {
-    max-width: 80%;
+    max-width: 95%;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 0.25rem 0.25rem -0.1rem rgba(0, 0, 0, 0.5);
     margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 .bayan__list:hover .bayan__label,
@@ -62,7 +64,7 @@ input {
 
 .bayan__label span {
     color: #D3F5FF;
-    transition: transform 0.35s;
+    transition: transform 0.45s;
 }
 
 .bayan__content:hover,
@@ -79,11 +81,11 @@ input {
     max-height: 0;
     padding: 0 1em;
     background-color: #D3F5FF;
-    transition: all 0.35s;
+    transition: all 0.45s;
 }
 
 .bayan__image {
-    width: 50%;
+    width: 100%;
 }
 
 input:checked~.bayan__label {
@@ -99,4 +101,44 @@ input:checked~.bayan__content {
     padding: 1em;
 }
 
-/* 820px 450px */
+@media only screen and (min-width: 450px) {
+    h1 {
+        font-size: 2em;
+        line-height: 2.5;
+    }
+
+    h4 {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin: 0 0 1em;
+    }
+
+    .bayan__list {
+        max-width: 90%;
+    }
+
+    .bayan__image {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    h1 {
+        font-size: 2.2em;
+        line-height: 2.5;
+    }
+
+    h4 {
+        font-size: 1.4em;
+        line-height: 1.6;
+        margin: 0 0 1.5em;
+    }
+
+    .bayan__list {
+        max-width: 75%;
+    }
+
+    .bayan__image {
+        width: 50%;
+    }
+}
