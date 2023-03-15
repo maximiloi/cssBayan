@@ -42,7 +42,7 @@ input {
     width: 100%;
     color: #1A252F;
     overflow: hidden;
-    border-bottom: 1px solid grey;
+    border-bottom: 0.0625rem solid grey;
 }
 
 .bayan__item:last-child {
