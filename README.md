@@ -1,6 +1,6 @@
 # cssBayan
 
-RSSchool task - codejam
+RSSchool task - codejam - Accordion only html and css
 
 ### Task deploy
 
