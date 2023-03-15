@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #1A252F;
+    background: #ecf0f1;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    line-height: 2;
+    text-align: center;
+}
+
+h4 {
+    margin: 0 0 0.5em;
+    font-weight: normal;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+
+.bayan__list {
+    max-width: 95%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.25rem -0.1rem rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.bayan__item {
+    width: 100%;
+    color: #1A252F;
+    overflow: hidden;
+    border-bottom: 0.0625rem solid grey;
+}
+
+.bayan__item:last-child {
+    border-bottom: none;
+}
+
+.bayan__label {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+
+    padding: 1em;
+    background: #D3F5FF;
+    cursor: pointer;
+}
+
+.bayan__label span {
+    color: #D3F5FF;
+    transition: transform 0.45s;
+}
+
+.bayan__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bayan__image {
+    align-self: center;
+    height: 0;
+    transition: 0.45s ease;
+}
+
+input:checked~.bayan__label {
+    color: #D65DB1;
+}
+
+input:checked~.bayan__label span {
+    transform: rotate(-90deg);
+}
+
+input:checked~.bayan__label .bayan__image {
+    height: 80vw;
+    padding: 1em;
+}
+
+@media (hover: hover) {
+
+    .bayan__list:hover .bayan__label,
+    .bayan__list:hover .bayan__label span {
+        color: #D65DB1;
+    }
+
+    .bayan__item:hover .bayan__label span {
+        transform: rotate(-90deg);
+    }
+
+    .bayan__label:hover>.bayan__image {
+        height: 30vw;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    h1 {
+        font-size: 2em;
+        line-height: 2.5;
+    }
+
+    h4 {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin: 0 0 1em;
+    }
+
+    .bayan__item:active p,
+    .bayan__item:active .bayan__label span,
+    .bayan__item:active .bayan__image {
+        opacity: 0.5;
+    }
+
+    .bayan__list {
+        max-width: 90%;
+    }
+
+    input:checked~.bayan__label .bayan__image {
+        height: 60vw;
+    }
+
+}
+
+@media only screen and (min-width: 820px) {
+    h1 {
+        font-size: 2.2em;
+        line-height: 2.5;
+    }
+
+    h4 {
+        font-size: 1.4em;
+        line-height: 1.6;
+        margin: 0 0 1.5em;
+    }
+
+    .bayan__list {
+        max-width: 75%;
+    }
+
+    input:checked~.bayan__label .bayan__image {
+        height: 30vw;
+    }
+}
