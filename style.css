@@ -103,6 +103,15 @@ input:checked~.bayan__label .bayan__image {
     .bayan__label:hover>.bayan__image {
         height: 30vw;
     }
+
+    @media only screen and (min-width: 820px) {
+
+        .bayan__item:active p,
+        .bayan__item:active .bayan__label span,
+        .bayan__item:active .bayan__image {
+            opacity: 0.5;
+        }
+    }
 }
 
 @media only screen and (min-width: 450px) {
@@ -115,12 +124,6 @@ input:checked~.bayan__label .bayan__image {
         font-size: 1.2em;
         line-height: 1.6;
         margin: 0 0 1em;
-    }
-
-    .bayan__item:active p,
-    .bayan__item:active .bayan__label span,
-    .bayan__item:active .bayan__image {
-        opacity: 0.5;
     }
 
     .bayan__list {
